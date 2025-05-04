@@ -3,7 +3,7 @@
 Official implementation of **"Deep learning unlocks the true potential of organ donation after circulatory death with accurate prediction of time-to-death"** published at *Nature Scientific Reports* (https://www.nature.com/articles/s41598-025-95079-7)
 
 ## Overview
-This repository contains the implementation of deep learning models for time-to-death prediction after circulatory death (DCD). Our model (ODE–RNN) overcomes the computational challenges of irregular, sparse clinical time-series data and effectively integrates clinical history. It outperforms existing approaches on external validations, thereby facilitating organ donation preparation. 
+This repository contains the implementation of deep learning models for time-to-death prediction after circulatory death (DCD). Among many potential models for this purpose, we propose to use ODE-RNN, which overcomes the computational challenges of irregular, sparse clinical time-series data and effectively integrates clinical history. It outperforms existing approaches on external validations, especially the widely-used clinical risk scores, thereby facilitating organ donation preparation. 
 
 ## Models
 - **GRU-dt**: Gated Recurrent Unit with delta time
