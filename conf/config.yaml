@@ -1,0 +1,50 @@
+# config.yaml
+logger:
+  use_wandb: True
+  entity: xingzhis
+  project: "patient_trajectory"
+  tags: ['default']
+model:
+  task: classification
+  # [classification, regression, ordinal]
+  type: GRU-dt
+  # [GRU-dt, GRU-D, ODERNN]
+  rnn_type: GRU
+  # [GRU, LSTM, RNN]
+  targetidx: 1
+  output_dim: 4
+
+training:
+  epochs: 50
+  batch_size: 256
+  learning_rate: 0.001
+  seed: 42
+  test_size: 0.2
+
+validation:
+  mode: cross_val
+  # [cross_val, train_only]
+  # cross_val: true
+  k_folds: 5
+  # external_validation: false
+  # split_train: false
+  # train_only: false
+
+calibration:
+  enabled: false
+  pct: 0.2
+  epochs: 20
+  lr: 0.01
+  n_bins_ece: 5
+
+paths:
+  # root: /gpfs/gibbs/pi/krishnaswamy_smita/xingzhi/patient_trajectory
+  # dataset: dataset/valid_split_time/all/yale_bf21.pt
+  # fold_idx: dataset/valid_split_time/all/fold_idx.pkl
+  # external_validation: dataset/valid_split/all/other_hosp.pt
+  # result: results_hydra_bf21
+  root: /gpfs/gibbs/pi/krishnaswamy_smita/xingzhi/patient_trajectory
+  dataset: dataset/time_gap/yale_bf21_0.pt
+  fold_idx: dataset/time_gap/fold_idx.pkl
+  result: results_hydra_bf21_time_gap_test
+  

@@ -1,0 +1,20 @@
+project: patient_trajectory
+program: main_hydra.py
+command:
+  - /gpfs/gibbs/pi/krishnaswamy_smita/xingzhi/.conda_envs/geosink/bin/python
+  - ${program}
+  - ${args_no_hyphens}
+method: grid  # or 'random', 'bayes'
+parameters:
+  validation.mode:
+    values: [cross_val, train_only]
+  paths.result:
+    values: [results_hydra_run]
+  paths.dataset:
+    values: [dataset/valid_split/all/yale.pt]
+  model.type:
+    values: [GRU-dt, GRU-D, ODERNN]
+  model.rnn_type:
+    values: [GRU, LSTM, RNN]
+  
+  
