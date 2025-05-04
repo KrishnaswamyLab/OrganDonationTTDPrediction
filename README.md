@@ -23,7 +23,7 @@ If you find this work useful, please cite our paper:
 }
 ```
 
-## A method that integrates static information and irregularly-sampled longitudinal variables
+## A method that integrates static and irregularly-sampled longitudinal variables
 <img src = "assets/architecture.png" width=800>
 
 ## Abstract
